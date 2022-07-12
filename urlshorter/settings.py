@@ -131,4 +131,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/create/url'
 LOGOUT_REDIRECT_URL = "login"
 
-CSRF_TRUSTED_ORIGINS = ["https://urlshort10.herokuapp.com/"]
+CSRF_TRUSTED_ORIGINS = ["https://urlshort10.herokuapp.com"]
