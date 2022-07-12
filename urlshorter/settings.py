@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)js9do^%flp!=am9bml!7fpjke)ph!979o^k2f^-*2p7#ad-xc'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -130,3 +130,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/create/url'
 LOGOUT_REDIRECT_URL = "login"
+
+CSRF_TRUSTED_ORIGINS = ["https://urlshort10.herokuapp.com/"]
