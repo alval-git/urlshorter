@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{%load static%}
+{% block head %}
+    <link rel="stylesheet" href={% static 'styles/gen_short_url.css' %}>
+{% endblock %}
+{% block content %}
+    <div class="page-wrapper">
+        <div class="title-wrapper">
+            <h2>Здесь url можно сделать короче</h2>
+        </div>
+        <form  action="" method="post">
+            {% csrf_token %}
+            <input name="long_url" type="text">
+            <button class="sbm-btn" type="submit">Сгенерировать</button>
+        </form>
+        <div class="message-wrapper">
+            {% if message %}
+                    <p>{{message}}</p>
+            {% endif %}
+            {% if gen_url %}
+                    <a class="short-url" id="short-url" href={{ gen_url }}>{{gen_url}}</a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href={% static 'styles/signup.css' %}>
+</head>
+<body>
+    <div class="reg-page-wrapper">
+        <div class="reg-form-wrapper">
+            <h2 class="login-title">Регистрация</h2>
+            <form  action="" class="reg-form" method="post">
+                {% csrf_token %}
+                <p for="username">Введите желаемый никнейм</p>
+                {{ form.username }}
+                <p for="password1">Введите пароль</p>
+                {{ form.password1 }}
+                <p>Длина пароля не должна быть менее 8 символов. Пароль не должен совпадать с логином, содержать только числа. </p>
+                <p for="password2">Подтвердите пароль</p>
+                {{ form.password2 }}
+                <button class="reg-btn" type="submit">Зарегистрироваться</button>
+            </form>
+            <a href="{% url 'login' %}">К странице входа</a>
+        </div>
+    </div>
+</body>
+</html>

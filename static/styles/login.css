@@ -1,0 +1,118 @@
+.log-page-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.login-form-wrapper{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.login-form{
+    border:1px solid #cccccc;
+    padding:2%;
+}
+
+.password-input-wrapper{
+    position: relative;
+}
+
+
+
+.login-input-wrapper{
+    position: relative;
+}
+
+.login-input-wrapper i{
+    position: absolute;
+    left:5px;
+    top:38px;
+}
+
+
+
+.log-form-input{
+    padding-left: 27px;
+    margin-top:30px;
+    border: 1px solid #cccccc;
+   border-radius: 5px;
+   background-color: #ffffff ;
+   outline: none;
+   height: 30px;
+   width: 250px;
+   font-size: 20px;
+   font-family: Tahoma;
+    transition: 0.5s;
+}
+.log-form-input:focus {
+  background-color: cornflowerblue;
+  border: none;
+  color:#ffffff;
+
+}
+
+
+
+
+.log-form-input::-webkit-input-placeholder {color:#cccccc;text-align: center;text-indent:0; transition:  1s ease; text-overflow:ellipsis;}
+.log-form-input::-moz-placeholder          {color:#cccccc;text-align: center;opacity:1;       transition: 1s ease;  text-overflow:ellipsis;}
+.log-form-input:-moz-placeholder           {color:#cccccc;text-align: center;opacity:1;       transition:1s ease;   text-overflow:ellipsis;}
+.log-form-input:-ms-input-placeholder      {color:#cccccc;text-align: center;text-indent:0; transition:  1s ease; text-overflow:ellipsis;}
+
+
+
+.log-form-input:focus::-webkit-input-placeholder{color:#ffffff; text-indent: 500px;}
+.log-form-input:focus::-moz-placeholder         {color:#ffffff; opacity: 0;}
+.log-form-input:focus:-moz-placeholder          {color:#ffffff; opacity:0;}
+.log-form-input:focus:-ms-input-placeholder     {color:#ffffff; text-indent: 500px;}
+
+.links-wrapper{
+    font-family: Tahoma;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-title{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-left: 100px;
+}
+
+
+.btn-wrapper{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.login-btn{
+    text-transform: uppercase;
+    font-family: Tahoma;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    border: 2px solid transparent;
+    transition: .5s;
+}
+
+.login-btn:hover{
+    color: #ffffff;
+    background-color: cornflowerblue;
+}
+
+@media screen and (max-width:900px){
+    .password-input-wrapper,.login-input-wrapper{
+        position: static;
+    }
+
+
+    .log-form-input{
+        padding-left:5px;
+    }
+
+}

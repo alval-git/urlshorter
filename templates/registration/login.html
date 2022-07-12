@@ -1,0 +1,37 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href={% static 'styles/login.css' %}>
+</head>
+<body>
+    <div class="log-page-wrapper">
+        <div class="login-form-wrapper">
+            <form class="login-form" action={% url 'login' %} method="post">
+                {% csrf_token %}
+                <p class="login-title">Логин</p>
+                <div class="login-input-wrapper">
+                    <input id="username" name="username" class="log-form-input"
+                                       placeholder="Логин" type="text"/>
+                </div>
+                <div class="password-input-wrapper">
+                    <input  id="password" name="password" class="log-form-input"
+                                       placeholder="Пароль" type="password"/>
+                </div>
+                <div class="links-wrapper">
+                    <a href="">Зарегистрироваться</a>
+                </div>
+                <div class="btn-wrapper">
+                    <button class="login-btn" type="submit">Войти</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href={% static 'styles/user_urls_list.css' %}>
+{% endblock %}
+{% block content %}
+    <div class="page-wrapper">
+        {% for url in object_list %}
+            <div class="url-item">
+                <div>
+                    <p>Короткий сгенерированный url:</p>
+                    <a href={{ url.short_url }}>{{ url.short_url }}</a>
+                </div>
+                <div>
+                    <a href={{ url.long_url }}>Указанный  url</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
