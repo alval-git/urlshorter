@@ -23,7 +23,7 @@ def CreateShortUrlView(request):
                     return render(request, template_name, {"message": request.session["gen_url"]})
 
                 slug = generateShortUrl()
-                gen_url = "https://urlshort10.herokuapp.com/" + slug
+                gen_url = "http://127.0.0.1:8000/" + slug
                 request.session["gen_url"] = gen_url
                 ShortUrl.objects.create(long_url=data['long_url'], short_url=gen_url, user=user, slug=slug)
                 return render(request, template_name, {"gen_url": request.session["gen_url"]})
