@@ -38,7 +38,7 @@ def CreateShortUrlView(request):
 class RedirectDetail(DetailView):
     template_name = 'redirect.html'
     model = ShortUrl
-    domain = 'http://127.0.0.1:8000/'
+    domain = 'https://urlshort10.herokuapp.com/'
     def dispatch(self, request, *args, **kwargs):
         current_path = request.path.replace('/', '')
         redirect_url = get_object_or_404(ShortUrl, slug=current_path).long_url
